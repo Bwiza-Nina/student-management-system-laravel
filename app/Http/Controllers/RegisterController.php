@@ -9,6 +9,9 @@ use App\Models\Courses;
 class RegisterController extends Controller
 {
     public function index(){
+        if(!session('id')){
+            return view('loginTeacherView');
+        }
         $teachers = DB::select("select * from teacher");
         return view('registerCourseView', ["teachers"=>$teachers]);
     }

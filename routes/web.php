@@ -18,3 +18,5 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'validation'])->name('register.course');
 Route::get('/registerTeacher', [\App\Http\Controllers\registerTeacherController::class, 'index']);
 Route::post('/registerTeacher', [\App\Http\Controllers\registerTeacherController::class, 'validation'])->name('register.teacher');
+Route::get('/success', [\App\Http\Controllers\registerTeacherController::class, 'success']);
+Route::post('/success', [\App\Http\Controllers\registerTeacherController::class, 'loginCheck'])->name('login.teacher');

@@ -17,3 +17,4 @@ use App\Http\Controllers\RegisterController;
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'validation'])->name('register.course');
 Route::get('/registerTeacher', [\App\Http\Controllers\registerTeacherController::class, 'index']);
+Route::post('/registerTeacher', [\App\Http\Controllers\registerTeacherController::class, 'validation'])->name('register.teacher');

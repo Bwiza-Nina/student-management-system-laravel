@@ -28,7 +28,7 @@
 <button class="btn btn-primary student"><a href="#" class="text-white text-decoration-none">Register Student</a></button>
 <button class="btn btn-primary course"><a href="#" class="text-white text-decoration-none">Register Course</a></button>
 
-<br><form action="#" method="POST" class="col-xl-4 mx-auto p-4 shadow p-3 mb-5 bg-white rounded mt-5">
+<br><form action="{{ route('register.teacher') }}" method="POST" class="col-xl-4 mx-auto p-4 shadow p-3 mb-5 bg-white rounded mt-5">
     @csrf
     <h4 class="fw-bold text-primary text-center text-capitalize">Register Yourself in tutorLab</h4>
     <div class="form-group mt-4">
@@ -43,6 +43,13 @@
     <input type="text" id="course" name="Teacher_lName" placeholder="Enter Your last names" class="form-control mt-1">
     </div>
     <small class="text-danger">@error('Teacher_lName')
+{{ $message }}
+    @enderror</small>
+    <div class="form-group mt-4">
+    <label for="course">Email</label>
+    <input type="text" id="course" name="email" placeholder="Enter Your email address" class="form-control mt-1">
+    </div>
+    <small class="text-danger">@error('email')
 {{ $message }}
     @enderror</small>
         <div class="form-group mt-4">

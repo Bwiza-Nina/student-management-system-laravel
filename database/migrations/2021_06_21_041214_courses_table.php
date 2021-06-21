@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Course extends Migration
+class CoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,6 +17,7 @@ class Course extends Migration
             $table->Id();
             $table->string('Course');
             $table->string('Teacher');
+            $table->integer('Periods');
             $table->timestamps();
         });
     }

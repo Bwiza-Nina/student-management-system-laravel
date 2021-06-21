@@ -26,8 +26,8 @@
     </style>
 </head>
 <body>
-<button class="btn btn-primary student"><a href="/register" class="text-white text-decoration-none">Register Student</a></button>
-<button class="btn btn-primary course"><a href="#" class="text-white text-decoration-none">Register Course</a></button>
+<button class="btn btn-primary student"><a href="#" class="text-white text-decoration-none">Register Student</a></button>
+<button class="btn btn-primary course"><a href="/register" class="text-white text-decoration-none">Register Course</a></button>
 </body>
 </html>
 

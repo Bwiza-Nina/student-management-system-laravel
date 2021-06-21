@@ -47,7 +47,7 @@
     @enderror</small>
     <div class="form-group mt-4">
     <label for="course">Email</label>
-    <input type="text" id="course" name="email" placeholder="Enter Your email address" class="form-control mt-1">
+    <input type="email" id="course" name="email" placeholder="Enter Your email address" class="form-control mt-1">
     </div>
     <small class="text-danger">@error('email')
 {{ $message }}

@@ -12,19 +12,23 @@ class registerTeacherController extends Controller
     }
 
     public function validation(Request $request){
-        $request->validate([
+        $validate = $request->validate([
             'Teacher_fName' => "required|min:4|max:100",
             'Teacher_lName' => "required|min:4|max:100",
-            'email' => "required|";
+            'email' => "required",
             'address' => "required|min:4|max:100"
         ]);
-
+        if(!$validate){
+            return back();
+        }else{
         $insertNewTeacher = new Teachers;
         $insertNewTeacher->First_Name = $request->Teacher_fName;
         $insertNewTeacher->Last_Name = $request->Teacher_lName;
+        $insertNewTeacher->Email = $request->email;
         $insertNewTeacher->Address = $request->address;
 
         $insertNewTeacher->save();
-        return back();
+        redirect('/success');
     }
+}
 }
